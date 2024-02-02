@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+require_relative '../config/environment'
+
+class TodoCLI
+  def run
+    count = 20
+    todos = TodoService.new.retrieve_todos(count)
+
+    todos.each do |todo|
+      display_todo(todo)
+    end
+  end
+
+  def display_todo(todo)
+    display_field = {
+    'title' => todo['title'],
+    'completed' => todo['completed']
+    }
+    puts JSON.pretty_generate(display_field)
+  end
+end
+
+TodoCLI.new.run if $PROGRAM_NAME == __FILE__
