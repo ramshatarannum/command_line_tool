@@ -1,24 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Todo CLI Project
 
-Things you may want to cover:
+This Ruby on Rails project is a command line tool that fetches 20 even TODOs from an external API and displays them in the command line interface.
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+These instructions will help you set up and run the project on your local machine.
 
-* Configuration
+### Prerequisites
 
-* Database creation
+- Ruby (version 2.7.4)
+- Rails (version 7.0.8)
 
-* Database initialization
+### Installation
 
-* How to run the test suite
+1. Clone the repository:
+   - git clone https://github.com/ramshatarannum/command_line_tool.git
+   - cd todo_cli
+   
+2. Install dependencies:
+  - bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Run migrations:
+  - rails db:migrate
+   
+### TO run the application
+   
+1. Make the CLI script executable:
+  - chmod +x bin/todo_cli
 
-* Deployment instructions
-
-* ...
+2. Run the CLI script to fetch and display TODOs:
+ - ./bin/todo_cli
